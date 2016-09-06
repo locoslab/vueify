@@ -81,6 +81,14 @@ describe('vueify', () => {
     expect(style).to.contain('h1 {\n  color: green;')
   })
 
+  test('ts', window => {
+    const module = window.vueModule
+    assertRenderFn(module, '<h2 class="red">{{msg}}</h2>')
+    expect(module.data().msg).to.contain('Hello from TypeScript Component A!')
+    const style = window.document.querySelector('style').textContent
+    expect(style).to.contain('comp-ts-a h2 {\n  color: #f00;\n}')
+  })
+
   test('pug', window => {
     var module = window.vueModule
     assertRenderFn(module,

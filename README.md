@@ -145,6 +145,7 @@ These are the preprocessors supported by vueify out of the box:
 - jade
 - pug
 - coffee-script (use `coffee` in [config section](#configuring-options))
+- TypeScript (use `lang='ts'`)
 
 ## PostCSS
 
